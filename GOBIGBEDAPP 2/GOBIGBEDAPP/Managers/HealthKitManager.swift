@@ -4,14 +4,10 @@ import Combine
 
 final class HealthKitManager: ObservableObject {
 
-
     @Published private(set) var hasSleepAccess: Bool = false
-
-
     let healthStore = HKHealthStore()
 
-  
-
+    // MARK: - Authorization
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
         guard HKHealthStore.isHealthDataAvailable(),
               let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis)
@@ -36,31 +32,61 @@ final class HealthKitManager: ObservableObject {
         DispatchQueue.main.async { self.hasSleepAccess = (canRead || canShare) }
     }
 
-
+    // MARK: - Write (direct)
     func writeSleep(start: Date, end: Date, completion: @escaping (Bool) -> Void) {
-        guard let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis) else {
-            completion(false); return
-        }
-        
-        let value = HKCategoryValueSleepAnalysis.asleep.rawValue
-        let sample = HKCategorySample(type: sleepType, value: value, start: start, end: end)
+        guard start < end,
+              let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis)
+        else { completion(false); return }
+
+        let sample = HKCategorySample(
+            type: sleepType,
+            value: HKCategoryValueSleepAnalysis.asleep.rawValue,
+            start: start,
+            end: end
+        )
         healthStore.save(sample) { success, _ in
             DispatchQueue.main.async { completion(success) }
         }
     }
 
+    // MARK: - Idempotent write (prevents dupes if already saved)
+    func ensureSleepSaved(start: Date, end: Date, completion: @escaping (Bool) -> Void) {
+        guard let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis) else {
+            completion(false); return
+        }
+
+        // Look for any sample BY THIS APP that overlaps [start, end].
+        let pred = NSCompoundPredicate(andPredicateWithSubpredicates: [
+            HKQuery.predicateForSamples(withStart: start, end: end, options: []),
+            HKQuery.predicateForObjects(from: [HKSource.default()])
+        ])
+        let sort = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: true)
+
+        let q = HKSampleQuery(sampleType: sleepType,
+                              predicate: pred,
+                              limit: 1,
+                              sortDescriptors: [sort]) { [weak self] _, samples, _ in
+            if let samples = samples, !samples.isEmpty {
+                // Already saved by this app → succeed without writing.
+                DispatchQueue.main.async { completion(true) }
+                return
+            }
+            self?.writeSleep(start: start, end: end, completion: completion)
+        }
+        healthStore.execute(q)
+    }
+
+    // MARK: - Read (unchanged)
     func fetchDailyHours(startDate: Date, endDate: Date, completion: @escaping ([(Date, Double)]) -> Void) {
         guard let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis) else {
             completion([]); return
         }
         let cal = Calendar.current
 
-        
         func healthDayStart(for date: Date) -> Date {
             let noonToday = cal.date(bySettingHour: 12, minute: 0, second: 0, of: date)!
             return (date < noonToday) ? cal.date(byAdding: .day, value: -1, to: noonToday)! : noonToday
         }
-
 
         let bucketStart = healthDayStart(for: startDate)
         let lastBucketStart = healthDayStart(for: endDate)
@@ -72,7 +98,6 @@ final class HealthKitManager: ObservableObject {
         }
         guard !bucketStarts.isEmpty else { completion([]); return }
 
-
         let queryStart = bucketStart
         let queryEnd = cal.date(byAdding: .day, value: 1, to: lastBucketStart)!
 
@@ -82,12 +107,9 @@ final class HealthKitManager: ObservableObject {
             options: [.strictStartDate, .strictEndDate]
         )
 
-
         let mySource = HKSource.default()
         let sourcePredicate = HKQuery.predicateForObjects(from: [mySource])
-
         let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [datePredicate, sourcePredicate])
-
         let sort = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: true)
 
         let q = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: [sort]) { [weak self] _, samples, _ in
@@ -96,14 +118,12 @@ final class HealthKitManager: ObservableObject {
                 return
             }
 
-
             let notUserEntered: [HKCategorySample] = samples.filter { smp in
                 if let wasUserEntered = smp.metadata?[HKMetadataKeyWasUserEntered] as? Bool, wasUserEntered {
                     return false
                 }
                 return true
             }
-
 
             let asleepValues: Set<Int> = {
                 var s: Set<Int> = [HKCategoryValueSleepAnalysis.asleep.rawValue]
@@ -117,7 +137,6 @@ final class HealthKitManager: ObservableObject {
                 return s
             }()
 
-
             var intervals: [(Date, Date)] = []
             for smp in notUserEntered where asleepValues.contains(smp.value) {
                 let s = max(smp.startDate, queryStart)
@@ -125,7 +144,6 @@ final class HealthKitManager: ObservableObject {
                 if s < e { intervals.append((s, e)) }
             }
             intervals.sort { $0.0 < $1.0 }
-
 
             var merged: [(Date, Date)] = []
             for iv in intervals {
@@ -135,7 +153,6 @@ final class HealthKitManager: ObservableObject {
                     merged.append(iv)
                 }
             }
-
 
             var totals: [Date: TimeInterval] = [:]
             for s in bucketStarts { totals[s] = 0 }
@@ -155,18 +172,13 @@ final class HealthKitManager: ObservableObject {
                 }
             }
 
-
             let result: [(Date, Double)] = bucketStarts.map { start in
                 (start, (totals[start] ?? 0) / 3600.0)
             }
-
             DispatchQueue.main.async { completion(result) }
         }
-
         healthStore.execute(q)
     }
-
-    
 
     func fetchLastDays(_ days: Int, completion: @escaping ([(Date, Double)]) -> Void) {
         let cal = Calendar.current
