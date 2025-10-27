@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC02B2102EA0488900861038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC02B20F2EA0488900861038 /* LaunchScreen.storyboard */; };
+		DC429F8A2E9C28D000142324 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC429F892E9C28CF00142324 /* Theme.swift */; };
+		DC429F912E9DA3FB00142324 /* sleep_lion_zzz.gif in Resources */ = {isa = PBXBuildFile; fileRef = DC429F902E9DA3FB00142324 /* sleep_lion_zzz.gif */; };
+		DC429F952E9DA41D00142324 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC429F942E9DA41500142324 /* GIFView.swift */; };
+		DC429F9B2E9DBE4D00142324 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC429F9A2E9DBE4A00142324 /* InstructionsView.swift */; };
+		DC429F9D2E9DBEAD00142324 /* restless_lion_sway.gif in Resources */ = {isa = PBXBuildFile; fileRef = DC429F9C2E9DBEAC00142324 /* restless_lion_sway.gif */; };
+		DC8A9E172EA82423005EE5F8 /* MotionGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A9E162EA82423005EE5F8 /* MotionGuard.swift */; };
+		DCA6304B2E9DC9A500BC48D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA6304A2E9DC9A500BC48D7 /* Assets.xcassets */; };
+		DCA630552E9EB13200BC48D7 /* SleepSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA630542E9EB12D00BC48D7 /* SleepSessionStore.swift */; };
+		DCA6305B2E9EB21A00BC48D7 /* SleepTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6305A2E9EB21A00BC48D7 /* SleepTrackingView.swift */; };
+		F10000000000000000000011 /* GOBIGBEDAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000011 /* GOBIGBEDAPPApp.swift */; };
+		F10000000000000000000012 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000012 /* AppState.swift */; };
+		F10000000000000000000013 /* Managers/HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000013 /* Managers/HealthKitManager.swift */; };
+		F10000000000000000000014 /* Managers/RewardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000014 /* Managers/RewardManager.swift */; };
+		F10000000000000000000015 /* Managers/NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000015 /* Managers/NotificationManager.swift */; };
+		F10000000000000000000016 /* Managers/CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000016 /* Managers/CalendarManager.swift */; };
+		F10000000000000000000017 /* Managers/AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000017 /* Managers/AuthManager.swift */; };
+		F10000000000000000000018 /* Models/SleepEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000018 /* Models/SleepEntry.swift */; };
+		F10000000000000000000019 /* Views/ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000019 /* Views/ContentView.swift */; };
+		F1000000000000000000001A /* Views/MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000001A /* Views/MainTabView.swift */; };
+		F1000000000000000000001B /* Views/SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000001B /* Views/SignInView.swift */; };
+		F1000000000000000000001C /* Views/SleepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000001C /* Views/SleepView.swift */; };
+		F1000000000000000000001D /* Views/RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000001D /* Views/RewardsView.swift */; };
+		F1000000000000000000001E /* Views/GraphsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000001E /* Views/GraphsView.swift */; };
+		F1000000000000000000001F /* Views/MotivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000001F /* Views/MotivationView.swift */; };
+		F10000000000000000000020 /* Views/SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000020 /* Views/SettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DC02B20F2EA0488900861038 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC429F842E9B6CFD00142324 /* GOBIGBEDAPP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GOBIGBEDAPP.entitlements; sourceTree = "<group>"; };
+		DC429F892E9C28CF00142324 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		DC429F902E9DA3FB00142324 /* sleep_lion_zzz.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sleep_lion_zzz.gif; sourceTree = "<group>"; };
+		DC429F942E9DA41500142324 /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
+		DC429F9A2E9DBE4A00142324 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
+		DC429F9C2E9DBEAC00142324 /* restless_lion_sway.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = restless_lion_sway.gif; sourceTree = "<group>"; };
+		DC8A9E162EA82423005EE5F8 /* MotionGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionGuard.swift; sourceTree = "<group>"; };
+		DCA6304A2E9DC9A500BC48D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DCA630542E9EB12D00BC48D7 /* SleepSessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepSessionStore.swift; sourceTree = "<group>"; };
+		DCA6305A2E9EB21A00BC48D7 /* SleepTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTrackingView.swift; sourceTree = "<group>"; };
+		F0000000000000000000000F /* GOBIGBEDAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = GOBIGBEDAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F00000000000000000000010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F00000000000000000000011 /* GOBIGBEDAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOBIGBEDAPPApp.swift; sourceTree = "<group>"; };
+		F00000000000000000000012 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		F00000000000000000000013 /* Managers/HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/HealthKitManager.swift; sourceTree = "<group>"; };
+		F00000000000000000000014 /* Managers/RewardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/RewardManager.swift; sourceTree = "<group>"; };
+		F00000000000000000000015 /* Managers/NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/NotificationManager.swift; sourceTree = "<group>"; };
+		F00000000000000000000016 /* Managers/CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/CalendarManager.swift; sourceTree = "<group>"; };
+		F00000000000000000000017 /* Managers/AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/AuthManager.swift; sourceTree = "<group>"; };
+		F00000000000000000000018 /* Models/SleepEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/SleepEntry.swift; sourceTree = "<group>"; };
+		F00000000000000000000019 /* Views/ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ContentView.swift; sourceTree = "<group>"; };
+		F0000000000000000000001A /* Views/MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/MainTabView.swift; sourceTree = "<group>"; };
+		F0000000000000000000001B /* Views/SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SignInView.swift; sourceTree = "<group>"; };
+		F0000000000000000000001C /* Views/SleepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SleepView.swift; sourceTree = "<group>"; };
+		F0000000000000000000001D /* Views/RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/RewardsView.swift; sourceTree = "<group>"; };
+		F0000000000000000000001E /* Views/GraphsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/GraphsView.swift; sourceTree = "<group>"; };
+		F0000000000000000000001F /* Views/MotivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/MotivationView.swift; sourceTree = "<group>"; };
+		F00000000000000000000020 /* Views/SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0000000000000000000000A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F0000000000000000000000C = {
+			isa = PBXGroup;
+			children = (
+				F0000000000000000000000D /* GOBIGBEDAPP */,
+				F0000000000000000000000E /* Products */,
+				F00000000000000000000010 /* Info.plist */,
+				DC429F902E9DA3FB00142324 /* sleep_lion_zzz.gif */,
+				DC429F9C2E9DBEAC00142324 /* restless_lion_sway.gif */,
+				DCA6304A2E9DC9A500BC48D7 /* Assets.xcassets */,
+				DC02B20F2EA0488900861038 /* LaunchScreen.storyboard */,
+			);
+			sourceTree = "<group>";
+		};
+		F0000000000000000000000D /* GOBIGBEDAPP */ = {
+			isa = PBXGroup;
+			children = (
+				DC429F842E9B6CFD00142324 /* GOBIGBEDAPP.entitlements */,
+				F00000000000000000000011 /* GOBIGBEDAPPApp.swift */,
+				F00000000000000000000012 /* AppState.swift */,
+				DC8A9E162EA82423005EE5F8 /* MotionGuard.swift */,
+				F00000000000000000000013 /* Managers/HealthKitManager.swift */,
+				F00000000000000000000014 /* Managers/RewardManager.swift */,
+				F00000000000000000000015 /* Managers/NotificationManager.swift */,
+				F00000000000000000000016 /* Managers/CalendarManager.swift */,
+				F00000000000000000000017 /* Managers/AuthManager.swift */,
+				F00000000000000000000018 /* Models/SleepEntry.swift */,
+				F00000000000000000000019 /* Views/ContentView.swift */,
+				F0000000000000000000001A /* Views/MainTabView.swift */,
+				F0000000000000000000001B /* Views/SignInView.swift */,
+				F0000000000000000000001C /* Views/SleepView.swift */,
+				DC429F892E9C28CF00142324 /* Theme.swift */,
+				F0000000000000000000001D /* Views/RewardsView.swift */,
+				F0000000000000000000001E /* Views/GraphsView.swift */,
+				F0000000000000000000001F /* Views/MotivationView.swift */,
+				F00000000000000000000020 /* Views/SettingsView.swift */,
+				DC429F9A2E9DBE4A00142324 /* InstructionsView.swift */,
+				DCA630542E9EB12D00BC48D7 /* SleepSessionStore.swift */,
+				DC429F942E9DA41500142324 /* GIFView.swift */,
+				DCA6305A2E9EB21A00BC48D7 /* SleepTrackingView.swift */,
+			);
+			path = GOBIGBEDAPP;
+			sourceTree = "<group>";
+		};
+		F0000000000000000000000E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0000000000000000000000F /* GOBIGBEDAPP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F00000000000000000000005 /* GOBIGBEDAPP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F00000000000000000000006 /* Build configuration list for PBXNativeTarget "GOBIGBEDAPP" */;
+			buildPhases = (
+				F00000000000000000000009 /* Sources */,
+				F0000000000000000000000A /* Frameworks */,
+				F0000000000000000000000B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GOBIGBEDAPP;
+			productName = GOBIGBEDAPP;
+			productReference = F0000000000000000000000F /* GOBIGBEDAPP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F00000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					F00000000000000000000005 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = F00000000000000000000002 /* Build configuration list for PBXProject "GOBIGBEDAPP" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F0000000000000000000000C;
+			productRefGroup = F0000000000000000000000E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F00000000000000000000005 /* GOBIGBEDAPP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0000000000000000000000B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC429F9D2E9DBEAD00142324 /* restless_lion_sway.gif in Resources */,
+				DC429F912E9DA3FB00142324 /* sleep_lion_zzz.gif in Resources */,
+				DC02B2102EA0488900861038 /* LaunchScreen.storyboard in Resources */,
+				DCA6304B2E9DC9A500BC48D7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F00000000000000000000009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC429F9B2E9DBE4D00142324 /* InstructionsView.swift in Sources */,
+				F10000000000000000000011 /* GOBIGBEDAPPApp.swift in Sources */,
+				F10000000000000000000012 /* AppState.swift in Sources */,
+				DC8A9E172EA82423005EE5F8 /* MotionGuard.swift in Sources */,
+				F10000000000000000000013 /* Managers/HealthKitManager.swift in Sources */,
+				F10000000000000000000014 /* Managers/RewardManager.swift in Sources */,
+				F10000000000000000000015 /* Managers/NotificationManager.swift in Sources */,
+				F10000000000000000000016 /* Managers/CalendarManager.swift in Sources */,
+				F10000000000000000000017 /* Managers/AuthManager.swift in Sources */,
+				DCA630552E9EB13200BC48D7 /* SleepSessionStore.swift in Sources */,
+				F10000000000000000000018 /* Models/SleepEntry.swift in Sources */,
+				F10000000000000000000019 /* Views/ContentView.swift in Sources */,
+				F1000000000000000000001A /* Views/MainTabView.swift in Sources */,
+				F1000000000000000000001B /* Views/SignInView.swift in Sources */,
+				F1000000000000000000001C /* Views/SleepView.swift in Sources */,
+				F1000000000000000000001D /* Views/RewardsView.swift in Sources */,
+				DC429F952E9DA41D00142324 /* GIFView.swift in Sources */,
+				F1000000000000000000001E /* Views/GraphsView.swift in Sources */,
+				F1000000000000000000001F /* Views/MotivationView.swift in Sources */,
+				F10000000000000000000020 /* Views/SettingsView.swift in Sources */,
+				DC429F8A2E9C28D000142324 /* Theme.swift in Sources */,
+				DCA6305B2E9EB21A00BC48D7 /* SleepTrackingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F00000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4924MQF7LJ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GOBIGBEDAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F00000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4924MQF7LJ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GOBIGBEDAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F00000000000000000000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = GOBIGBEDAPP/GOBIGBEDAPP.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 27UT48A399;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oluwajoba.GOBIGBEDAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F00000000000000000000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = GOBIGBEDAPP/GOBIGBEDAPP.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 27UT48A399;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oluwajoba.GOBIGBEDAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F00000000000000000000002 /* Build configuration list for PBXProject "GOBIGBEDAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00000000000000000000003 /* Debug */,
+				F00000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F00000000000000000000006 /* Build configuration list for PBXNativeTarget "GOBIGBEDAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00000000000000000000007 /* Debug */,
+				F00000000000000000000008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F00000000000000000000001 /* Project object */;
+}
