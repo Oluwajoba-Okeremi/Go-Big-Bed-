@@ -102,8 +102,10 @@ It's also available on the App Store!
 # Go Big Bed
 
 **SCREENSHOTS**
+
 MOTIVATION VIEW
 <img width="293" height="633" alt="IMG_2998" src="https://github.com/user-attachments/assets/991001b5-7f6b-429a-81c1-5580e2b1e990" />
+
 
 SLEEP VIEW
 <img width="293" height="633" alt="IMG_2999" src="https://github.com/user-attachments/assets/7cd3a1ee-84dc-4d8c-8cfe-1fd499695ad6" />
