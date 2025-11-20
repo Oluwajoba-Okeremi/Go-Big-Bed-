@@ -14,7 +14,7 @@ The design goal is simple: make “going big” on sleep feel as rewarding and v
 
 ## Lessons Learned
 
--Success in community service means helping 1 person
+ABOVE ALL: Success in community service means helping 1 person
 - A stopwatch alone is not reliable on iOS because the app can be suspended while the screen is locked. Storing the start time and recomputing elapsed time on resume is more robust.
 - Motion-based auto-stop reduces cheating and accidental overcounting, but requires tuning motion thresholds to avoid false positives.
 - HealthKit requires clear user messaging. The app has to handle denied permissions, no recent sleep data, and the first-run experience where Health data may not exist yet.
